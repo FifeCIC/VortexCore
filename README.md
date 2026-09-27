@@ -62,16 +62,29 @@ index.html            Overview - the problem, the idea, and the honest status
 technology.html       The concept - pressure budget, three-stage separation, the physics
 feasibility.html      What exists and what does not; the five open questions
 interest.html         How to get involved, and what this is not
-assets/css/site.css   Single shared stylesheet
-assets/js/vortex-3d.js  Three.js illustration of the separation chamber
-assets/img/           FifeCIC branding
+docs/
+  SIMULATION-BRIEF.md Specification for the Phase 0 modelling study
+assets/
+  css/site.css        Single shared stylesheet
+  img/                Diagrams and FifeCIC branding
+scripts/
+  check-site.mjs      Validates every page and diagram before publication
+  generate-device-diagram.mjs   Builds the chamber cross-section
+  generate-gchart.mjs           Builds the G-force requirement chart
 ```
 
 Plain static HTML. No build step, no framework, no dependencies to install. Serve the directory and
-it works.
+it works. **The published pages load no JavaScript at all** - there is no script tag on any page.
 
-The only external runtime dependency is Three.js (r128, via cdnjs) on `technology.html`. If it fails
-to load, the module falls back to a text notice rather than leaving a blank panel.
+Diagrams are hand-authored or generated SVG, committed as files. They scale to any device, print
+cleanly, and together weigh less than 25&nbsp;KB. Superseded diagram versions are kept rather than
+overwritten, and each carries a version stamp inside the artwork so a screenshot or printout can be
+identified.
+
+`scripts/check-site.mjs` runs on every push (see `.github/workflows/validate-site.yml`). It checks
+that local references resolve, that SVG comments contain no illegal `--`, that every drawn and
+animated coordinate sits inside its viewBox, and that every page has a title, description, Open
+Graph tags and image alt text.
 
 ## The rules this project publishes under
 
