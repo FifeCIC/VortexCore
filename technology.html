@@ -157,36 +157,65 @@
     <section>
       <h2 class="section-title">3. What the device would look like</h2>
       <p class="section-sub">
-        A cross-section of the intended arrangement. Two things in it are easy to misread, and both
-        matter: the flow reverses inside the chamber, and the device has two outlets rather than one.
+        A cross-section of the intended arrangement. Two things in it are easy to misread: the water
+        changes direction, and the particles do not.
       </p>
 
       <figure class="figure">
-        <img src="assets/img/device-cross-section-v2.svg" width="880" height="760"
-             alt="Cross-section of a hydrocyclone showing both outlets. Feed enters tangentially at the upper left and spirals down the outer wall. The flow reverses at the cone and climbs the core, leaving through the vortex finder at the top carrying water and the light fraction. Particles denser than water continue down to the apex and leave as the underflow. A note beneath explains that, because the product water leaves by the top outlet, it has to be piped back down the riser to reach the floors below.">
+        <img src="assets/img/device-cross-section-v3.svg" width="880" height="780"
+             alt="Cross-section of a hydrocyclone showing both outlets and the sorting mechanism. Feed enters tangentially at the upper left. Two radial arrows in the cylindrical section show denser particles drifting outward and buoyant particles drifting inward. Water spirals down the outer wall, reverses at the cone and climbs the core, leaving through the vortex finder at the top carrying water and the light fraction; particles denser than water continue to the apex and leave as the underflow. A note explains that the particles do not swim upstream, and that whether buoyant particles drift inward fast enough to be captured is the least certain part of the concept.">
         <figcaption>
-          <strong>Illustration of intended behaviour.</strong> The particles orbit the vessel, so
-          they sweep side to side across the cross-section and change size as they pass nearer and
-          further from the viewer. A real flow path is helical; this is a section through it, so the
-          spiral is shown by the sweep rather than drawn as a helix. Not an engineering drawing, and
-          not a fabrication reference.
+          <strong>Illustration of intended behaviour &mdash; diagram v3.</strong> Particles orbit the
+          vessel, so they sweep side to side across the section and change size as they pass nearer
+          and further from the viewer. The two radial drift arrows are the actual sorting step. A real
+          flow path is helical; this is a section through it, so the spiral is shown by the sweep
+          rather than drawn as a helix. Not an engineering drawing, and not a fabrication reference.
         </figcaption>
       </figure>
 
-      <h3>The part that looks wrong and is not</h3>
+      <h3>Why the particles are not swimming upstream</h3>
       <div class="prose">
         <p>
-          Water appears to travel <em>up</em> the middle of the device. That is not a mistake in the
-          drawing. Inside a hydrocyclone the flow descends the outer wall, reverses at the cone, and
-          climbs the core to leave through the top. The device is a pressure vessel rather than a
-          gravity drain, so which way the water travels is set by the pressure field inside it, not
-          by which direction is down.
+          A drawing like this invites an obvious objection: water only travels down, so how can
+          anything travel up it? The answer is that <strong>the water itself changes direction, and
+          most of it leaves by the top.</strong> In a hydrocyclone the flow splits into two co-axial
+          vortices &mdash; an outer one descending the wall, and an inner one climbing the core to
+          the overflow. That is what the vortex finder is for, and it is why the device has two
+          outlets.
         </p>
         <p>
-          It does have a consequence worth stating plainly, because it changes how the thing would
-          be plumbed in: the product water leaves by the <em>top</em> outlet, so it has to be piped
-          back down the riser to reach the floors below. That is an additional run of pipe, and it is
-          the reason this is not a like-for-like swap for a pressure-reducing valve.
+          The particles are <em>carried</em> by that water. They do not push upward against the
+          current. The separation actually happens <em>sideways</em>: in the centrifugal field,
+          material denser than water drifts outward while material less dense drifts inward, and each
+          is then transported by whichever vortex takes it. The two drift arrows on the diagram are
+          the whole mechanism; the vertical movement is only the transport afterwards.
+        </p>
+        <p>
+          The flow split does have a consequence for how the thing would be plumbed in, and it is
+          worth stating because it is easy to miss: the product water leaves by the <em>top</em>
+          outlet, so it has to be piped back down the riser to reach the floors below. That is an
+          additional run of pipe, and it is the reason this is not a like-for-like swap for a
+          pressure-reducing valve.
+        </p>
+      </div>
+
+      <div class="callout callout-warn">
+        <h2>The weak point, stated plainly</h2>
+        <p>
+          Radial drift is well proven for dense solids. It is far less proven for <em>buoyant</em>
+          particles, which is the case this concept depends on. Three things make buoyant capture
+          harder: the density difference driving the drift is small; the central core of a
+          hydrocyclone is typically an air core rather than water, so a floating particle may sit at
+          a free surface rather than being skimmed; and the argument depends on the inward drift
+          being fast enough to reach the core before the water carrying it leaves the bottom.
+        </p>
+        <p>
+          That is why <a href="feasibility.html">feasibility</a> treats light-fraction capture as an
+          open question rather than a design feature, and why the next step is a numerical model
+          rather than a nicer drawing. It is also entirely possible that
+          <strong>a hydrocyclone is simply the wrong device for buoyant material</strong>, and that
+          this needs a different separation principle altogether. A model should be able to tell us
+          that &mdash; and if it does, that is a useful answer, not a failure.
         </p>
       </div>
     </section>
