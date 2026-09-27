@@ -157,43 +157,72 @@
     <section>
       <h2 class="section-title">3. What the device would look like</h2>
       <p class="section-sub">
-        A cross-section of the intended arrangement: the feed entering tangentially, the conical
-        body where the spin accelerates, the vortex finder that skims the low-pressure core, and the
-        apex where the heavy fraction drops out.
+        A cross-section of the intended arrangement. Two things in it are easy to misread, and both
+        matter: the flow reverses inside the chamber, and the device has two outlets rather than one.
       </p>
 
       <figure class="figure">
-        <img src="assets/img/device-cross-section.svg" width="760" height="540"
-             alt="Cross-section of a hydrocyclone. Water enters tangentially at the upper left and spirals down the outer wall. Particles denser than water, such as PET and PVC, are thrown outward and fall to the apex at the bottom. Buoyant particles such as polyethylene and polypropylene are drawn into the low-pressure core and leave through the vortex finder outlet at the top.">
+        <img src="assets/img/device-cross-section-v2.svg" width="880" height="760"
+             alt="Cross-section of a hydrocyclone showing both outlets. Feed enters tangentially at the upper left and spirals down the outer wall. The flow reverses at the cone and climbs the core, leaving through the vortex finder at the top carrying water and the light fraction. Particles denser than water continue down to the apex and leave as the underflow. A note beneath explains that, because the product water leaves by the top outlet, it has to be piped back down the riser to reach the floors below.">
         <figcaption>
-          <strong>Illustration of intended behaviour.</strong> The two particle paths are the entire
-          point of the device &mdash; and they are also the two things that are unproven. A real flow
-          path is helical; this is a cross-section, so the spiral is indicated rather than drawn.
-          Not an engineering drawing, and not a fabrication reference.
+          <strong>Illustration of intended behaviour.</strong> The particles orbit the vessel, so
+          they sweep side to side across the cross-section and change size as they pass nearer and
+          further from the viewer. A real flow path is helical; this is a section through it, so the
+          spiral is shown by the sweep rather than drawn as a helix. Not an engineering drawing, and
+          not a fabrication reference.
         </figcaption>
       </figure>
+
+      <h3>The part that looks wrong and is not</h3>
+      <div class="prose">
+        <p>
+          Water appears to travel <em>up</em> the middle of the device. That is not a mistake in the
+          drawing. Inside a hydrocyclone the flow descends the outer wall, reverses at the cone, and
+          climbs the core to leave through the top. The device is a pressure vessel rather than a
+          gravity drain, so which way the water travels is set by the pressure field inside it, not
+          by which direction is down.
+        </p>
+        <p>
+          It does have a consequence worth stating plainly, because it changes how the thing would
+          be plumbed in: the product water leaves by the <em>top</em> outlet, so it has to be piped
+          back down the riser to reach the floors below. That is an additional run of pipe, and it is
+          the reason this is not a like-for-like swap for a pressure-reducing valve.
+        </p>
+      </div>
     </section>
 
     <section>
-      <h2 class="section-title">4. The finishing loop</h2>
+      <h2 class="section-title">4. Where each stream goes</h2>
       <p class="section-sub">
-        Separation concentrates contamination into a small stream. Something still has to happen
-        to that stream.
+        The chamber produces two streams rather than one clean and one dirty. Where they go is a
+        separate question from how the separation works, so it is drawn separately.
       </p>
+
+      <figure class="figure">
+        <img src="assets/img/flow-pathways.svg" width="1000" height="620"
+             alt="Flow schematic of four stages. Stage 1 is the Vortex Core separation chamber. Its underflow, carrying the heavy fraction, runs to stage 4, the evaporation loop. Its overflow, carrying water and the light fraction, runs to stage 2, a light-fraction skimmer, whose own reject also runs to stage 4. The water then goes to stage 3, polishing, and on to the floors below. Stage 4 leaves dry plastic residue for a collection tray and recycling, and condensed water returned to the clean side.">
+        <figcaption>
+          <strong>Design intent, stage by stage.</strong> Nothing here has been built, and no stage
+          has been tested. Note that the evaporation loop takes <em>both</em> reject streams &mdash;
+          which makes it the part of the concept with the least engineering behind it.
+        </figcaption>
+      </figure>
+
       <div class="prose">
         <p>
-          The concept routes the reject fraction &mdash; estimated at 5&ndash;10% of total flow &mdash;
-          through a heat exchanger fed by the building&rsquo;s own waste heat: chiller returns, server
-          room exhaust, or solar gain. The water evaporates; the plastic does not. What is
-          condensed back is clean water, and what remains is a dry residue that can be collected in
-          a tray and sent for recycling rather than discharged as liquid waste.
+          The concept routes both reject streams &mdash; the underflow, estimated at
+          5&ndash;10% of total flow, plus the smaller skimmed light fraction &mdash; through a heat
+          exchanger fed by the building&rsquo;s own waste heat: chiller returns, server room exhaust,
+          or solar gain. The water evaporates; the plastic does not. What is condensed back is clean
+          water, and what remains is a dry residue that can be collected in a tray and sent for
+          recycling rather than discharged as liquid waste.
         </p>
         <p>
           Two honest caveats. First, the energy balance of this loop has not been calculated in
-          detail; &ldquo;waste&rdquo; heat is not the same as <em>available</em> heat, and it may be
-          available when the building does not need the loop to run. Second, a system that removes
-          particles above roughly 15&nbsp;&micro;m is a pre-treatment step, not a complete potable
-          water treatment train, and should not be described as one.
+          detail; &ldquo;waste&rdquo; heat is not the same as <em>available</em> heat, and it may not
+          be available when the loop needs to run. Second, a system that removes particles above
+          roughly 15&nbsp;&micro;m is a pre-treatment step, not a complete potable water treatment
+          train, and should not be described as one.
         </p>
       </div>
     </section>

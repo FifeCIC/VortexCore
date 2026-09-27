@@ -132,6 +132,40 @@ for (const file of svgFiles) {
     inBox(x, y, 'text');
   }
 
+  // 7b. Animated geometry must stay in the viewBox too. This is the check that
+  //     matters for SMIL: a bad values array sends particles out of the diagram
+  //     while the markup still looks entirely reasonable, which is precisely how
+  //     the offset-path and animateMotion faults got through.
+  const inX = (x, label) => {
+    if (x < vx - 1 || x > vx + vw + 1) fail(rel, `${label} at x=${x} is outside the viewBox width ${vw}`);
+  };
+  const inY = (y, label) => {
+    if (y < vy - 1 || y > vy + vh + 1) fail(rel, `${label} at y=${y} is outside the viewBox height ${vh}`);
+  };
+
+  for (const m of svg.matchAll(/<animate\b[^>]*\/?>/g)) {
+    const tag = m[0];
+    const attr = (tag.match(/attributeName="([^"]+)"/) || [])[1];
+    if (attr !== 'cx' && attr !== 'cy' && attr !== 'r') continue;
+
+    const values = (tag.match(/values="([^"]+)"/) || [])[1];
+    if (!values) {
+      fail(rel, `<animate attributeName="${attr}"> has no values array`);
+      continue;
+    }
+
+    for (const raw of values.split(';')) {
+      const n = Number(raw.trim());
+      if (Number.isNaN(n)) {
+        fail(rel, `<animate ${attr}> contains a non-numeric sample: "${raw}"`);
+        break;
+      }
+      if (attr === 'cx') inX(n, 'animate cx sample');
+      if (attr === 'cy') inY(n, 'animate cy sample');
+      if (attr === 'r' && (n <= 0 || n > 40)) fail(rel, `animate r sample is implausible: ${n}`);
+    }
+  }
+
   // 8. Any url(#id) reference must resolve within the same file.
   const ids = new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]));
   for (const m of svg.matchAll(/url\(#([^)]+)\)/g)) {
