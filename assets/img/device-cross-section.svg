@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540"
+     role="img" aria-labelledby="dsTitle dsDesc">
+  <title id="dsTitle">Cross-section of the proposed separation chamber</title>
+  <desc id="dsDesc">A hydrocyclone cross-section. Water enters tangentially near the top and spirals down the
+  outer wall. Particles denser than water, such as PET and PVC, are thrown outward and leave through the apex at
+  the bottom. Particles lighter than water, such as polyethylene and polypropylene, are drawn into the
+  low-pressure core and leave through the vortex finder outlet at the top.</desc>
+
+  <style>
+    .lbl-strong { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #1C2E4A; }
+    .lbl-small  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #6c6c7e; }
+    .lbl-flow   { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #2a9bc4; font-style: italic; }
+    .legend     { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; fill: #4a4a5a; }
+
+    .leader   { stroke: #b8c2ce; stroke-width: 1; fill: none; }
+    .body     { fill: #eaf4fa; stroke: #1C2E4A; stroke-width: 2; stroke-linejoin: round; }
+    .finder   { fill: #ffffff; stroke: #1C2E4A; stroke-width: 2; }
+    .pipe     { fill: #d6e9f4; stroke: #1C2E4A; stroke-width: 2; }
+    .swirl    { fill: none; stroke: #44B8E0; stroke-width: 1.4; stroke-dasharray: 5 5; opacity: .85; }
+    .pathline { fill: none; stroke: #44B8E0; stroke-width: 1.6; stroke-dasharray: 6 4; opacity: .8; }
+
+    .p-heavy { fill: #1C2E4A; }
+    .p-light { fill: #C4A882; stroke: #8a7452; stroke-width: .8; }
+
+    /* Sequencing cue only. The particles are positioned statically on the guide
+       paths, so the diagram stays correct at any display size, in any renderer,
+       and when printed. Opacity alone implies flow direction: brightness travels
+       down the outer path and back up the core, in the order the particles are
+       written. No geometry moves, so nothing can drift out of the viewBox.
+
+       Two earlier approaches were tried and both failed, which is why this is
+       deliberately the boring one:
+         - CSS offset-path: path(...) on an SVG child is scaled by the element
+           CTM, so particles left the viewBox as soon as the diagram was
+           displayed at a different width.
+         - SMIL animateMotion: the motion is a translation applied ON TOP of the
+           element's own cx/cy, so every particle overshot by its start offset. */
+    @keyframes flow-cue {
+      0%, 100% { opacity: .12; }
+      6%       { opacity: 1; }
+      26%      { opacity: 1; }
+      40%      { opacity: .12; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .p-seq { animation: flow-cue 3.6s linear infinite; }
+    }
+  </style>
+
+  <defs>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#44B8E0"/>
+    </marker>
+  </defs>
+
+  <!-- ============================================================ body ===== -->
+  <path class="body" d="M270,100 L490,100 L490,240 L394,420 L394,460 L366,460 L366,420 L270,240 Z"/>
+
+  <!-- swirl planes, indicating rotational flow -->
+  <ellipse class="swirl" cx="380" cy="164" rx="110" ry="20"/>
+  <ellipse class="swirl" cx="380" cy="216" rx="110" ry="20"/>
+  <ellipse class="swirl" cx="380" cy="304" rx="78"  ry="15"/>
+
+  <!-- vortex finder: descends into the body and out through the top -->
+  <rect class="finder" x="352" y="48" width="56" height="220" rx="3"/>
+
+  <!-- tangential feed inlet -->
+  <path class="pipe" d="M152,148 L270,148 L270,180 L152,180 Z"/>
+  <ellipse cx="270" cy="164" rx="13" ry="16" fill="#d6e9f4" stroke="#1C2E4A" stroke-width="2"/>
+
+  <!-- ================================================= flow guide paths === -->
+  <path class="pathline" d="M296,164 C258,206 272,258 302,300 C330,344 352,382 372,424"
+        marker-end="url(#arrowBlue)"/>
+  <path class="pathline" d="M388,424 C404,380 396,312 384,258 L380,96"
+        marker-end="url(#arrowBlue)"/>
+
+  <!-- ==================================================== particles ========= -->
+  <!-- Positions are fixed points lying on the two guide paths above. Order in
+       this file is the order of travel: heavy runs inlet -> apex, light runs
+       apex -> overflow. The staggered animation-delay values are what create
+       the sense of movement. -->
+  <circle class="p-heavy p-seq" cx="292" cy="182" r="5.5" style="animation-delay:0s"/>
+  <circle class="p-heavy p-seq" cx="271" cy="232" r="5.5" style="animation-delay:.45s"/>
+  <circle class="p-heavy p-seq" cx="299" cy="296" r="5.5" style="animation-delay:.9s"/>
+  <circle class="p-heavy p-seq" cx="341" cy="370" r="5.5" style="animation-delay:1.35s"/>
+
+  <circle class="p-light p-seq" cx="395" cy="393" r="5.5" style="animation-delay:1.8s"/>
+  <circle class="p-light p-seq" cx="399" cy="345" r="5.5" style="animation-delay:2.25s"/>
+  <circle class="p-light p-seq" cx="391" cy="290" r="5.5" style="animation-delay:2.7s"/>
+  <circle class="p-light p-seq" cx="382" cy="180" r="5.5" style="animation-delay:3.15s"/>
+
+  <!-- ========================================================== labels ===== -->
+  <text class="lbl-strong" x="258" y="104" text-anchor="end">Feed inlet</text>
+  <text class="lbl-small"  x="258" y="120" text-anchor="end">tangential, 2&#8211;5 m/s</text>
+  <text class="lbl-flow"   x="258" y="232" text-anchor="end">spiral flow, descending</text>
+
+  <line class="leader" x1="500" y1="74"  x2="414" y2="74"/>
+  <text class="lbl-strong" x="506" y="78">Overflow</text>
+  <text class="lbl-small"  x="506" y="95">light fraction leaves through the finder</text>
+
+  <line class="leader" x1="500" y1="206" x2="414" y2="206"/>
+  <text class="lbl-strong" x="506" y="210">Vortex finder</text>
+  <text class="lbl-small"  x="506" y="227">skims the low-pressure core</text>
+
+  <line class="leader" x1="500" y1="322" x2="452" y2="322"/>
+  <text class="lbl-strong" x="506" y="326">Conical body</text>
+  <text class="lbl-small"  x="506" y="343">spin accelerates as it narrows</text>
+
+  <line class="leader" x1="500" y1="432" x2="400" y2="432"/>
+  <text class="lbl-strong" x="506" y="436">Apex / underflow</text>
+  <text class="lbl-small"  x="506" y="453">heavy fraction collected</text>
+
+  <!-- ========================================================== legend ===== -->
+  <circle class="p-heavy" cx="38" cy="478" r="6"/>
+  <text class="legend" x="52" y="483">Heavy fraction &#8212; PET, PVC. Denser than water: thrown outward, falls to the apex.</text>
+
+  <circle class="p-light" cx="38" cy="504" r="6"/>
+  <text class="legend" x="52" y="509">Light fraction &#8212; PE, PP. Buoyant: drawn into the core, skimmed through the finder.</text>
+</svg>

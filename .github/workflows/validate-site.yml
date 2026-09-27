@@ -1,0 +1,35 @@
+name: Validate site
+
+# Runs scripts/check-site.mjs on every push. The site has no build step, so
+# without this there is nothing standing between a mistake and the published
+# page. Both faults it was written for were invisible in the markup:
+#
+#   - an SVG whose XML comments contained '--', which browsers fetch happily
+#     and then refuse to parse
+#   - particles animated with CSS offset-path on SVG children, which are scaled
+#     by the element CTM and so leave the viewBox at other display widths
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate HTML and SVG
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run site checks
+        run: node scripts/check-site.mjs

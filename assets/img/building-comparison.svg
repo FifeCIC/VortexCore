@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500"
+     role="img" aria-labelledby="bdTitle bdDesc">
+  <title id="bdTitle">Where the pressure goes today, and where it would go with Vortex Core</title>
+  <desc id="bdDesc">Two riser schematics side by side. On the left, a conventional pressure-reducing valve
+  destroys the building's surplus head pressure as heat. On the right, the separation chamber spends that same
+  pressure on rotation, so the energy separates particles instead of being wasted.</desc>
+
+  <style>
+    .panel-title { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #1C2E4A; }
+    .panel-sub   { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #6c6c7e; }
+    .cap         { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; fill: #4a4a5a; }
+    .press-high  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 600; fill: #2a9bc4; }
+    .press-safe  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 600; fill: #74a832; }
+
+    .shell   { fill: #f6f8fa; stroke: #c3ccd6; stroke-width: 1.5; }
+    .floor   { stroke: #e2e6ea; stroke-width: 1; }
+    .tank    { fill: #d6e9f4; stroke: #1C2E4A; stroke-width: 1.6; }
+    .riser-hi { stroke: #2a9bc4; stroke-width: 5; stroke-linecap: round; }
+    .riser-lo { stroke: #74a832; stroke-width: 5; stroke-linecap: round; }
+    .leg     { stroke: #c3ccd6; stroke-width: 1.5; }
+    .divider { stroke: #e2e6ea; stroke-width: 1; }
+    .heat    { fill: none; stroke: #c4a882; stroke-width: 1.6; stroke-linecap: round; }
+  </style>
+
+  <defs>
+    <marker id="arrowTan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c4a882"/>
+    </marker>
+    <marker id="arrowNavy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1C2E4A"/>
+    </marker>
+  </defs>
+
+  <line class="divider" x1="380" y1="16" x2="380" y2="460"/>
+
+  <!-- ==================================================== PANEL A: TODAY -->
+  <text class="panel-title" x="185" y="30" text-anchor="middle">Today</text>
+  <text class="panel-sub"   x="185" y="47" text-anchor="middle">pressure-reducing valve</text>
+
+  <!-- roof tank -->
+  <rect class="tank" x="135" y="62" width="100" height="24" rx="2"/>
+  <line class="leg" x1="150" y1="86" x2="150" y2="98"/>
+  <line class="leg" x1="220" y1="86" x2="220" y2="98"/>
+
+  <!-- building shell and floors -->
+  <rect class="shell" x="100" y="98" width="170" height="290"/>
+  <line class="floor" x1="100" y1="127" x2="270" y2="127"/>
+  <line class="floor" x1="100" y1="156" x2="270" y2="156"/>
+  <line class="floor" x1="100" y1="185" x2="270" y2="185"/>
+  <line class="floor" x1="100" y1="214" x2="270" y2="214"/>
+  <line class="floor" x1="100" y1="243" x2="270" y2="243"/>
+  <line class="floor" x1="100" y1="272" x2="270" y2="272"/>
+  <line class="floor" x1="100" y1="301" x2="270" y2="301"/>
+  <line class="floor" x1="100" y1="330" x2="270" y2="330"/>
+  <line class="floor" x1="100" y1="359" x2="270" y2="359"/>
+
+  <!-- riser: high pressure above the valve, safe below -->
+  <line class="riser-hi" x1="185" y1="86" x2="185" y2="232"/>
+  <line class="riser-lo" x1="185" y1="266" x2="185" y2="388"/>
+  <rect x="169" y="232" width="32" height="34" rx="3" fill="#C4A882" stroke="#1C2E4A" stroke-width="1.6"/>
+
+  <!-- heat thrown away -->
+  <path class="heat" d="M203,240 q10,-6 20,0 q10,6 20,0" marker-end="url(#arrowTan)"/>
+  <path class="heat" d="M203,249 q10,-6 20,0 q10,6 20,0" marker-end="url(#arrowTan)"/>
+  <path class="heat" d="M203,258 q10,-6 20,0 q10,6 20,0" marker-end="url(#arrowTan)"/>
+  <text class="cap" x="248" y="245">wasted</text>
+  <text class="cap" x="248" y="261">as heat</text>
+
+  <!-- pressure annotations, coloured to match the riser -->
+  <text class="press-high" x="94" y="164" text-anchor="end">100 PSI</text>
+  <text class="press-safe" x="94" y="340" text-anchor="end">safe pressure</text>
+
+  <text class="cap" x="185" y="408" text-anchor="middle">Pressure destroyed by friction.</text>
+  <text class="cap" x="185" y="425" text-anchor="middle">The energy leaves as heat.</text>
+
+  <!-- =========================================== PANEL B: WITH VORTEX CORE -->
+  <text class="panel-title" x="565" y="30" text-anchor="middle">With Vortex Core</text>
+  <text class="panel-sub"   x="565" y="47" text-anchor="middle">separation chamber</text>
+
+  <rect class="tank" x="515" y="62" width="100" height="24" rx="2"/>
+  <line class="leg" x1="530" y1="86" x2="530" y2="98"/>
+  <line class="leg" x1="600" y1="86" x2="600" y2="98"/>
+
+  <rect class="shell" x="490" y="98" width="160" height="290"/>
+  <line class="floor" x1="490" y1="127" x2="650" y2="127"/>
+  <line class="floor" x1="490" y1="156" x2="650" y2="156"/>
+  <line class="floor" x1="490" y1="185" x2="650" y2="185"/>
+  <line class="floor" x1="490" y1="214" x2="650" y2="214"/>
+  <line class="floor" x1="490" y1="243" x2="650" y2="243"/>
+  <line class="floor" x1="490" y1="272" x2="650" y2="272"/>
+  <line class="floor" x1="490" y1="301" x2="650" y2="301"/>
+  <line class="floor" x1="490" y1="330" x2="650" y2="330"/>
+  <line class="floor" x1="490" y1="359" x2="650" y2="359"/>
+
+  <line class="riser-hi" x1="565" y1="86" x2="565" y2="230"/>
+  <line class="riser-lo" x1="565" y1="268" x2="565" y2="388"/>
+
+  <!-- the chamber: a cone narrowing downward, straddling the riser -->
+  <path d="M541,226 L589,226 L577,266 L553,266 Z" fill="#d6e9f4" stroke="#1C2E4A" stroke-width="1.8" stroke-linejoin="round"/>
+  <line x1="541" y1="226" x2="589" y2="226" stroke="#1C2E4A" stroke-width="1.8"/>
+
+  <!-- separated fraction leaving to one side -->
+  <line x1="589" y1="240" x2="670" y2="240" stroke="#1C2E4A" stroke-width="1.6" marker-end="url(#arrowNavy)"/>
+  <circle cx="622" cy="240" r="3.2" fill="#1C2E4A"/>
+  <circle cx="640" cy="240" r="3.2" fill="#C4A882"/>
+  <text class="cap" x="678" y="236">fraction</text>
+  <text class="cap" x="678" y="251">out</text>
+
+  <text class="press-high" x="474" y="164" text-anchor="end">100 PSI</text>
+  <text class="press-safe" x="474" y="340" text-anchor="end">safe pressure</text>
+
+  <text class="cap" x="565" y="408" text-anchor="middle">Pressure spent on rotation.</text>
+  <text class="cap" x="565" y="425" text-anchor="middle">The energy separates particles.</text>
+</svg>

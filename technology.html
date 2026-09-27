@@ -87,6 +87,16 @@
         Design target: 2,500&ndash;3,000&nbsp;G sustained at roughly 80&nbsp;PSI inlet and design flow.
         Whether that is reachable in a compact device is one of the questions we cannot yet answer.
       </p>
+
+      <figure class="figure" style="margin-top:26px">
+        <img src="assets/img/building-comparison.svg" width="760" height="500"
+             alt="Two riser schematics. On the left, labelled Today, a pressure-reducing valve destroys the surplus head pressure as heat, shown leaving the valve as wavy arrows. On the right, labelled With Vortex Core, a separation chamber spends the same pressure on rotation, and the separated fraction leaves to one side.">
+        <figcaption>
+          <strong>The whole point, in one picture.</strong> Both buildings have the same water, the
+          same head and the same pressure to shed. The only difference is whether that pressure is
+          destroyed by friction or spent on rotation.
+        </figcaption>
+      </figure>
     </section>
 
     <section>
@@ -147,16 +157,19 @@
     <section>
       <h2 class="section-title">3. What the device would look like</h2>
       <p class="section-sub">
-        An illustration of the intended arrangement: conical separation chamber, inner vortex
-        finder, tangential inlet and outlet. Drag to rotate.
+        A cross-section of the intended arrangement: the feed entering tangentially, the conical
+        body where the spin accelerates, the vortex finder that skims the low-pressure core, and the
+        apex where the heavy fraction drops out.
       </p>
 
       <figure class="figure">
-        <div id="vortex-3d" aria-label="Interactive 3D illustration of the separation chamber"></div>
+        <img src="assets/img/device-cross-section.svg" width="760" height="540"
+             alt="Cross-section of a hydrocyclone. Water enters tangentially at the upper left and spirals down the outer wall. Particles denser than water, such as PET and PVC, are thrown outward and fall to the apex at the bottom. Buoyant particles such as polyethylene and polypropylene are drawn into the low-pressure core and leave through the vortex finder outlet at the top.">
         <figcaption>
-          <strong>Illustration only.</strong> This is a visual model built to explain the intended
-          geometry. It is not a CAD model, an engineering drawing, or a fabrication reference, and
-          it has not been validated against any physical device.
+          <strong>Illustration of intended behaviour.</strong> The two particle paths are the entire
+          point of the device &mdash; and they are also the two things that are unproven. A real flow
+          path is helical; this is a cross-section, so the spiral is indicated rather than drawn.
+          Not an engineering drawing, and not a fabrication reference.
         </figcaption>
       </figure>
     </section>
@@ -365,9 +378,6 @@
     </div>
   </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-<script src="assets/js/vortex-3d.js" defer></script>
 
 </body>
 </html>
