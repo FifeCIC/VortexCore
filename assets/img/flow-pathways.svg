@@ -9,13 +9,13 @@
   condensed water returned to the clean side.</desc>
 
   <style>
-    .num   { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #2a9bc4; }
-    .name  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #1C2E4A; }
-    .sub   { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11.5px; fill: #6c6c7e; }
-    .flowlab { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #4a4a5a; }
-    .panel-label { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 700; fill: #1C2E4A; }
-    .panel-line  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #4a4a5a; }
-    .foot  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #6c6c7e; }
+    .num   { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; fill: #2a9bc4; }
+    .name  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #1C2E4A; }
+    .sub   { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; fill: #6c6c7e; }
+    .flowlab { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #4a4a5a; }
+    .panel-label { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13.5px; font-weight: 700; fill: #1C2E4A; }
+    .panel-line  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #4a4a5a; }
+    .foot  { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; fill: #6c6c7e; }
 
     .box   { fill: #ffffff; stroke: #1C2E4A; stroke-width: 1.8; }
     .box-reject { fill: #fdf6ec; stroke: #C4A882; stroke-width: 1.8; }
@@ -53,7 +53,6 @@
   <text class="name" x="520" y="130" text-anchor="middle">Light-fraction skimmer</text>
   <text class="sub" x="520" y="150" text-anchor="middle">removes what the core carried out</text>
 
-  <path class="flow" d="M630,132 L724,132" marker-end="url(#fpArrow)"/>
   <text class="flowlab" x="677" y="118" text-anchor="middle">water</text>
 
   <!-- stage 3 -->
