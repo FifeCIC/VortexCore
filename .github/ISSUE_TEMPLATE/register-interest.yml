@@ -1,0 +1,65 @@
+name: Register an interest
+description: Tell us how you would like to be involved with Vortex Core.
+title: "[Interest] "
+labels: ["interest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. This project is at concept stage - there is nothing built
+        yet - so an opinion, a correction or an offer to model something is worth more right now
+        than anything else.
+
+        If you would rather not post publicly, email **queries@fifecic.scot** instead.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area is this about?
+      options:
+        - Multiphase or particle-transport simulation
+        - Hydrocyclone or separation design
+        - Building services, plumbing or water treatment
+        - Possible pilot site or host building
+        - Patent, novelty or IP guidance
+        - Research collaboration
+        - A correction or challenge to something on the site
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: interest
+    attributes:
+      label: How would you like to be involved?
+      description: A few lines is plenty. What you can offer, or what you think is wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: critique
+    attributes:
+      label: Anything you think is wrong (optional)
+      description: |
+        The most useful thing you can send us. If the physics does not hold, or a claim on the
+        site overreaches, say so - it will be corrected and you will be credited if you want it.
+    validations:
+      required: false
+
+  - type: input
+    id: link
+    attributes:
+      label: A link we should read (optional)
+      placeholder: https://
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: You may quote this publicly and credit me by my GitHub handle
+          required: false
+        - label: You may use this, but please keep my identity out of it
+          required: false

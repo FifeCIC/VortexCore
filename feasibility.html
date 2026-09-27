@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feasibility and open questions - Vortex Core</title>
+<meta name="description" content="What exists for Vortex Core and what does not: the open engineering questions, how we intend to answer them, and the validation rules we will hold ourselves to.">
+<link rel="canonical" href="https://fifecic.github.io/VortexCore/feasibility.html">
+<link rel="icon" href="assets/img/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Feasibility and open questions - Vortex Core">
+<meta property="og:description" content="Nothing is built. Here are the questions that decide whether the concept is real, and how we intend to answer them.">
+<meta property="og:url" content="https://fifecic.github.io/VortexCore/feasibility.html">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-text">
+        <strong>Vortex Core</strong>
+        <span>A FifeCIC research project</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Overview</a>
+      <a href="technology.html">The concept</a>
+      <a href="feasibility.html" aria-current="page">Feasibility</a>
+      <a href="interest.html">Get involved</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Nothing has been built</p>
+    <h1>Feasibility and open questions</h1>
+    <p class="lead">
+      This page exists so that nobody has to guess how far along Vortex Core is. It sets out what
+      exists, what does not, the questions that decide whether the concept is real, and the rules
+      we intend to hold ourselves to when answers arrive.
+    </p>
+  </div>
+</div>
+
+<main id="main">
+  <div class="wrap">
+
+    <section>
+      <h2 class="section-title">What exists today</h2>
+      <p class="section-sub">
+        Assessed honestly, and updated as things change. The right-hand column matters at least as
+        much as the left.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Element</th>
+              <th scope="col">Status</th>
+              <th scope="col">Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Engineering concept</td>
+              <td><span class="tag tag-yes">Exists</span></td>
+              <td>Separation architecture, intended flow path and stage roles are described and internally consistent.</td>
+            </tr>
+            <tr>
+              <td>Calculated physics</td>
+              <td><span class="tag tag-partial">Partial</span></td>
+              <td>Settling requirements derived from a Stokes-type relationship. Not independently checked, and not yet validated against a numerical model.</td>
+            </tr>
+            <tr>
+              <td>Cost model</td>
+              <td><span class="tag tag-partial">Indicative</span></td>
+              <td>Built from published figures and stated assumptions. No supplier quotes, no site survey.</td>
+            </tr>
+            <tr>
+              <td>Physical prototype or test rig</td>
+              <td><span class="tag tag-no">Does not exist</span></td>
+              <td>No bench-top apparatus has been assembled and no test has been run.</td>
+            </tr>
+            <tr>
+              <td>Simulation output</td>
+              <td><span class="tag tag-no">Does not exist</span></td>
+              <td>No CFD or particle-transport study has been carried out. This is the next step.</td>
+            </tr>
+            <tr>
+              <td>CAD or engineering drawings</td>
+              <td><span class="tag tag-no">Does not exist</span></td>
+              <td>The 3D view on the concept page is an explanatory illustration, not a model.</td>
+            </tr>
+            <tr>
+              <td>Independent test data</td>
+              <td><span class="tag tag-no">Does not exist</span></td>
+              <td>No laboratory has tested anything. There are no performance results of any kind.</td>
+            </tr>
+            <tr>
+              <td>Patent application</td>
+              <td><span class="tag tag-no">None filed</span></td>
+              <td>The novelty position has not been established. No application has been filed anywhere.</td>
+            </tr>
+            <tr>
+              <td>Certification</td>
+              <td><span class="tag tag-no">None held</span></td>
+              <td>No certification body has assessed this. Any future certification would be a long process after a working device exists.</td>
+            </tr>
+            <tr>
+              <td>Pilot site or partner</td>
+              <td><span class="tag tag-no">None</span></td>
+              <td>No building has been identified and no partner has been engaged.</td>
+            </tr>
+            <tr>
+              <td>Commercial entity</td>
+              <td><span class="tag tag-no">None</span></td>
+              <td>There is no company, no funding and no investment being sought. FifeCIC is supporting the enquiry, not selling a product.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-sub" style="margin-top:18px; margin-bottom:0">
+        On a conventional readiness scale this sits at the very bottom: an idea with a physical
+        rationale attached. We are not going to dress that up.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">The questions that decide it</h2>
+      <p class="section-sub">
+        Five things stand between this concept and a credible case. Each one has a route to an
+        answer that does not require building anything yet.
+      </p>
+
+      <h3>1. Can the required force be generated in a compact device?</h3>
+      <p class="section-sub" style="margin-bottom:12px">
+        The design point is 2,500&ndash;3,000&nbsp;G at roughly 80&nbsp;PSI inlet. Higher force means higher
+        velocity, which means greater pressure loss and more wear on every surface in contact with
+        the water.
+      </p>
+      <ul class="plain-list">
+        <li>
+          <strong>How we intend to answer it</strong>
+          <span>Analytical and numerical modelling of the chamber at design flow, to establish whether the target is reachable within an acceptable pressure budget before anything is fabricated.</span>
+        </li>
+      </ul>
+
+      <h3>2. Does the light-fraction stage actually work, or does it concentrate the problem?</h3>
+      <p class="section-sub" style="margin-bottom:12px">
+        This is the risk that would sink the concept fastest. A chamber tuned to eject heavy PET
+        can drive buoyant polypropylene into the core &mdash; which is the stream intended to be
+        clean. A device that removes one plastic and concentrates another would be worse than no
+        device at all.
+      </p>
+      <ul class="plain-list">
+        <li>
+          <strong>How we intend to answer it</strong>
+          <span>Particle-tracking simulation of both density fractions through the same geometry, reported separately. Any result that shows net transfer into the product stream ends the concept in its current form and we will say so.</span>
+        </li>
+      </ul>
+
+      <h3>3. Does the settling relationship hold at the sizes that matter?</h3>
+      <p class="section-sub" style="margin-bottom:12px">
+        The G-force figures quoted on the concept page come from a Stokes-type relationship, which
+        assumes laminar flow around the particle. At high rotational speeds and small particle
+        sizes that assumption becomes questionable.
+      </p>
+      <ul class="plain-list">
+        <li>
+          <strong>How we intend to answer it</strong>
+          <span>Compare the analytical result against a numerical model that does not assume laminar settling, and report where the two diverge. This is the kind of checking that is cheap in simulation and expensive in hardware.</span>
+        </li>
+      </ul>
+
+      <h3>4. Is the evaporation loop a genuine energy gain?</h3>
+      <p class="section-sub" style="margin-bottom:12px">
+        The concept uses building waste heat to evaporate the reject stream. Waste heat and
+        <em>available</em> heat are not the same thing, and the heat may not be there when the loop
+        needs to run.
+      </p>
+      <ul class="plain-list">
+        <li>
+          <strong>How we intend to answer it</strong>
+          <span>A heat-balance study against realistic building profiles, including seasonal variation and the case where no useful waste heat is available. If the loop only works on paper with ideal conditions, that needs to be known early.</span>
+        </li>
+      </ul>
+
+      <h3>5. Can it be maintained in the real world?</h3>
+      <p class="section-sub" style="margin-bottom:12px">
+        A separator processing building water will foul, scale and wear. A design that performs
+        beautifully on day one and needs dismantling every month is not a solution to anything.
+      </p>
+      <ul class="plain-list">
+        <li>
+          <strong>How we intend to answer it</strong>
+          <span>Review of fouling behaviour in comparable hydrocyclone and water-treatment installations, feeding into a maintenance interval as a stated design assumption rather than a claim.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Proposed programme</h2>
+      <div class="callout callout-warn">
+        <h2>No phase of this has started</h2>
+        <p>
+          The sequence below is a plan, not progress. Nothing has been scheduled, funded or begun.
+          It is here so that anyone evaluating the concept can see the intended route from an idea
+          to something measured.
+        </p>
+      </div>
+
+      <div class="roadmap-phase">
+        <div class="phase-meta">Phase 0 &mdash; the current stage</div>
+        <h3>Digital simulation and design study</h3>
+        <p>
+          Numerical modelling of the separation chamber, both density fractions tracked separately,
+          and a heat-balance review. No hardware. The purpose is to answer the five questions above
+          and to kill the concept cheaply if it deserves killing.
+        </p>
+      </div>
+
+      <div class="roadmap-phase">
+        <div class="phase-meta">Phase 1 &mdash; not started</div>
+        <h3>Bench-top validation</h3>
+        <p>
+          A small test rig using water dosed with characterised particles, measured against a
+          defined protocol. This is where design targets are either met or replaced with reality.
+        </p>
+      </div>
+
+      <div class="roadmap-phase">
+        <div class="phase-meta">Phase 2 &mdash; not started</div>
+        <h3>Independent verification and publication</h3>
+        <p>
+          Testing by a party with no stake in the outcome, with the method and raw data published
+          alongside whatever the result turns out to be.
+        </p>
+      </div>
+
+      <div class="roadmap-phase">
+        <div class="phase-meta">Phase 3 &mdash; not started, and conditional</div>
+        <h3>Pilot installation</h3>
+        <p>
+          Only meaningful if earlier phases succeed, and only possible with a host building willing
+          to take part. No site has been identified.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">The rules we will hold ourselves to</h2>
+      <p class="section-sub">
+        These are commitments about how this project talks about itself. They exist because
+        research that overstates itself is worse than research that stays unpublished.
+      </p>
+      <div class="cards">
+        <div class="card card-accent">
+          <h3>No unmeasured performance figures</h3>
+          <p>
+            No removal efficiency, energy saving or payback period will appear on this site as a
+            finding until it has been measured and independently checked. Design targets stay
+            labelled as targets.
+          </p>
+        </div>
+        <div class="card card-accent-green">
+          <h3>No legal status without a document</h3>
+          <p>
+            No claim of a patent application, a granted patent or a registered trademark will
+            appear unless the corresponding filing exists and can be referenced. The current status
+            is: none filed.
+          </p>
+        </div>
+        <div class="card card-accent-tan">
+          <h3>Negative results get published too</h3>
+          <p>
+            If simulation shows the concept does not work at the particle sizes that matter, that
+            finding will be published here in the same place the concept is described. A failed
+            idea honestly reported is a useful contribution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">The intellectual-property position</h2>
+      <div class="prose">
+        <p>
+          Establishing whether there is anything protectable here is part of the feasibility work,
+          not an afterthought. The intended arrangement combines well-established industrial
+          techniques &mdash; hydrocyclones have been used for decades &mdash; in a specific
+          application. That may be novel, or it may be an obvious combination. We do not know yet,
+          and we are not going to claim either.
+        </p>
+        <p>
+          The honest position: <strong>no application has been filed, no attorney has been
+          engaged, and no freedom-to-operate search has been carried out.</strong> The next step is
+          a prior-art and novelty review, and we would welcome contact from anyone with experience
+          of patent work in water treatment or separation technology.
+        </p>
+        <p>
+          Concept and design rights are reserved. We would rather find a constructive route with
+          the right people than publish defensively and hope.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta">
+        <div>
+          <h2>Something here you can help with?</h2>
+          <p>
+            Simulation, separation engineering, water treatment, patent work, or hosting a pilot
+            &mdash; all of it is genuinely welcome. This is an enquiry, and enquiries need people.
+          </p>
+        </div>
+        <a class="btn" href="interest.html">Register an interest</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>The project</h4>
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="technology.html">The concept</a></li>
+          <li><a href="feasibility.html">Feasibility and open questions</a></li>
+          <li><a href="interest.html">Get involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:queries@fifecic.scot">queries@fifecic.scot</a></li>
+          <li><a href="https://github.com/FifeCIC/VortexCore/issues" rel="noopener">Raise a question on GitHub</a></li>
+          <li><a href="https://fifecic.scot/" rel="noopener">fifecic.scot</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Status</h4>
+        <ul>
+          <li>Concept and feasibility stage</li>
+          <li>Nothing built or certified</li>
+          <li>No patent application filed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <div class="footer-brand">
+        <img src="assets/img/fifecic-logo.png" alt="">
+        <span>Supported by FifeCIC &mdash; a Community Interest Company registered in Scotland.</span>
+      </div>
+      <p style="margin-top:14px">
+        Vortex Core is a research concept. No performance figures on this site are validated by
+        testing, and none should be relied upon. Where a number appears, it is either a design
+        target, a calculated requirement, or a stated assumption.
+      </p>
+      <p>
+        &copy; FifeCIC. Concept and design rights reserved. We are actively exploring the
+        intellectual-property position and welcome contact from anyone who can help with it.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

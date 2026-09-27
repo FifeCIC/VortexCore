@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The concept - Vortex Core</title>
+<meta name="description" content="How the Vortex Core concept works: spending a building's waste head pressure on centrifugal separation, with a waste-heat evaporation loop finishing the reject stream.">
+<link rel="canonical" href="https://fifecic.github.io/VortexCore/technology.html">
+<link rel="icon" href="assets/img/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The concept - Vortex Core">
+<meta property="og:description" content="Spending a building's wasted head pressure on centrifugal separation, then finishing the reject stream with waste heat.">
+<meta property="og:url" content="https://fifecic.github.io/VortexCore/technology.html">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-text">
+        <strong>Vortex Core</strong>
+        <span>A FifeCIC research project</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Overview</a>
+      <a href="technology.html" aria-current="page">The concept</a>
+      <a href="feasibility.html">Feasibility</a>
+      <a href="interest.html">Get involved</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Design intent &mdash; not a specification</p>
+    <h1>The concept</h1>
+    <p class="lead">
+      A pressure-reducing valve is a component that exists only to destroy energy. Vortex Core
+      asks whether that energy can be put to work instead, and whether the result is enough to
+      separate microplastics from the water passing through it.
+    </p>
+  </div>
+</div>
+
+<main id="main">
+  <div class="wrap">
+
+    <div class="callout callout-warn">
+      <h2>How to read this page</h2>
+      <p>
+        Everything below is <strong>design intent</strong>. No part of it has been built or
+        measured. Figures are either calculated requirements, design targets, or stated
+        assumptions &mdash; and each one is labelled as such. Nothing here is a test result.
+      </p>
+    </div>
+
+    <section>
+      <h2 class="section-title">1. The pressure budget</h2>
+      <p class="section-sub">
+        The starting point is not a new energy source. It is an existing one that is currently
+        spent on nothing.
+      </p>
+      <div class="prose">
+        <p>
+          A twenty-storey building pumps water to a roof tank. By the time that water reaches the
+          lower floors, the column above it has produced something in the region of
+          80&ndash;100&nbsp;PSI at the base of the riser. Domestic fixtures and fittings are rated for a
+          fraction of that, so a pressure-reducing valve dissipates the surplus as friction and
+          heat. It is deliberate, universal, and it wastes a genuinely useful quantity of energy.
+        </p>
+        <p>
+          Vortex Core replaces that valve with a tangential inlet. The water is not allowed to lose
+          its pressure quietly &mdash; it is injected tangentially into a conical chamber at
+          2&ndash;5&nbsp;m/s and forced into a tight spiral. Head pressure becomes rotational velocity.
+          The device still delivers the pressure reduction the building required; it simply takes
+          payment for it in useful work.
+        </p>
+      </div>
+      <div class="formula">
+        pressure energy in &rarr; tangential velocity &rarr; rotational acceleration (G) &rarr; particle migration &rarr; reduced pressure at outlet
+      </div>
+      <p class="section-sub" style="margin-bottom:0">
+        Design target: 2,500&ndash;3,000&nbsp;G sustained at roughly 80&nbsp;PSI inlet and design flow.
+        Whether that is reachable in a compact device is one of the questions we cannot yet answer.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">2. Three stages, each using a different property</h2>
+      <p class="section-sub">
+        A single separator cannot resolve particles that behave in opposite ways. The concept
+        therefore uses three stages in series, each targeting a different physical difference.
+      </p>
+
+      <div class="figure">
+        <div class="stack-diagram" role="img" aria-label="Flow diagram: roof tank, heavy cyclone, light-fraction skimmer, polishing stage, then distribution to floors.">
+          <div class="node"><strong>Roof tank</strong><span>gravity head, approx. 80&ndash;100 PSI at the base</span></div>
+          <div class="arrow">&darr;</div>
+          <div class="node"><strong>Stage 1 &mdash; Centrifugal cyclone</strong><span>heavy fraction: PET, PVC, sand and sediment &mdash; thrown outward and collected</span></div>
+          <div class="arrow">&darr;</div>
+          <div class="node node-alt"><strong>Stage 2 &mdash; Vortex finder</strong><span>light fraction: PE and PP drawn into the low-pressure core and skimmed</span></div>
+          <div class="arrow">&darr;</div>
+          <div class="node node-green"><strong>Stage 3 &mdash; Polishing</strong><span>UV-C for biological safety, optional carbon for taste and odour</span></div>
+          <div class="arrow">&darr;</div>
+          <div class="node"><strong>Distribution to floors</strong><span>at the pressure the building needed in the first place</span></div>
+        </div>
+        <figcaption>
+          Indicative flow path. Each stage consumes a small amount of pressure
+          (roughly 2&nbsp;PSI in the concept), so the arrangement needs enough head to drive all three.
+        </figcaption>
+      </div>
+
+      <div class="cards">
+        <div class="card card-accent">
+          <h3>Stage 1 &mdash; heavy fraction</h3>
+          <p>
+            Water enters tangentially and forms a tight vortex. Particles denser than water
+            &mdash; PET and PVC at 1.3&ndash;1.5&nbsp;g/cm&sup3;, along with sand and sediment &mdash; are slung
+            to the outer wall and fall through an apex valve. Design target: removal of particles
+            above 20&nbsp;&micro;m.
+          </p>
+        </div>
+        <div class="card card-accent-green">
+          <h3>Stage 2 &mdash; light fraction</h3>
+          <p>
+            The centre of a vortex is a low-pressure eye. Polymers lighter than water
+            &mdash; polyethylene and polypropylene at 0.85&ndash;0.95&nbsp;g/cm&sup3; &mdash; migrate inward
+            rather than outward, and can be skimmed from that core instead of being left in the
+            product water. This is the stage with the hardest physics in it.
+          </p>
+        </div>
+        <div class="card card-accent-tan">
+          <h3>Stage 3 &mdash; polishing</h3>
+          <p>
+            A UV-C chamber for biological safety, and optionally a carbon block for taste and
+            odour. This stage is conventional water treatment, included because a separator is not
+            a disinfectant and should not be presented as one.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">3. What the device would look like</h2>
+      <p class="section-sub">
+        An illustration of the intended arrangement: conical separation chamber, inner vortex
+        finder, tangential inlet and outlet. Drag to rotate.
+      </p>
+
+      <figure class="figure">
+        <div id="vortex-3d" aria-label="Interactive 3D illustration of the separation chamber"></div>
+        <figcaption>
+          <strong>Illustration only.</strong> This is a visual model built to explain the intended
+          geometry. It is not a CAD model, an engineering drawing, or a fabrication reference, and
+          it has not been validated against any physical device.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2 class="section-title">4. The finishing loop</h2>
+      <p class="section-sub">
+        Separation concentrates contamination into a small stream. Something still has to happen
+        to that stream.
+      </p>
+      <div class="prose">
+        <p>
+          The concept routes the reject fraction &mdash; estimated at 5&ndash;10% of total flow &mdash;
+          through a heat exchanger fed by the building&rsquo;s own waste heat: chiller returns, server
+          room exhaust, or solar gain. The water evaporates; the plastic does not. What is
+          condensed back is clean water, and what remains is a dry residue that can be collected in
+          a tray and sent for recycling rather than discharged as liquid waste.
+        </p>
+        <p>
+          Two honest caveats. First, the energy balance of this loop has not been calculated in
+          detail; &ldquo;waste&rdquo; heat is not the same as <em>available</em> heat, and it may be
+          available when the building does not need the loop to run. Second, a system that removes
+          particles above roughly 15&nbsp;&micro;m is a pre-treatment step, not a complete potable
+          water treatment train, and should not be described as one.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">5. The physics question, stated plainly</h2>
+      <p class="section-sub">
+        This is the part that decides whether the concept is viable. It is also the part most
+        easily glossed over, so here it is in full.
+      </p>
+      <div class="prose">
+        <p>
+          The rate at which a suspended particle migrates under centrifugal force follows a form of
+          Stokes&rsquo; law:
+        </p>
+      </div>
+      <div class="formula">
+        v = (d&sup2; &times; |&rho;p &minus; &rho;f| &times; a<sub>c</sub>) &divide; (18 &times; &eta;)
+      </div>
+      <p class="section-sub">
+        where <em>d</em> is particle diameter, <em>&rho;p</em> and <em>&rho;f</em> are the densities of
+        particle and fluid, <em>a<sub>c</sub></em> is centrifugal acceleration, and <em>&eta;</em> is
+        viscosity.
+        Two things follow immediately: separation gets harder as the square of particle size, and
+        harder as the density difference shrinks.
+      </p>
+
+      <div class="table-scroll">
+        <table>
+          <caption>Calculated G-force required at 50&nbsp;&micro;m and 5&nbsp;&micro;m, by polymer density. These are requirements derived from the relationship above &mdash; not measured results.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Particle size</th>
+              <th scope="col">Polymer</th>
+              <th scope="col">Behaviour</th>
+              <th scope="col">G-force required</th>
+              <th scope="col">Within our 2,500&ndash;3,000&nbsp;G design point?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>50&nbsp;&micro;m</td>
+              <td>PET</td>
+              <td>Denser than water</td>
+              <td>19&nbsp;G</td>
+              <td><span class="tag tag-yes">Comfortably</span></td>
+            </tr>
+            <tr>
+              <td>50&nbsp;&micro;m</td>
+              <td>Polyethylene</td>
+              <td>Buoyant</td>
+              <td>147&nbsp;G</td>
+              <td><span class="tag tag-yes">Comfortably</span></td>
+            </tr>
+            <tr>
+              <td>5&nbsp;&micro;m</td>
+              <td>PET</td>
+              <td>Denser than water</td>
+              <td>1,931&nbsp;G</td>
+              <td><span class="tag tag-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>5&nbsp;&micro;m</td>
+              <td>Polyethylene</td>
+              <td>Buoyant</td>
+              <td>14,679&nbsp;G</td>
+              <td><span class="tag tag-no">No &mdash; order of magnitude short</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn" style="margin-top:24px">
+        <h2>The gap, named</h2>
+        <p>
+          At 5&nbsp;&micro;m the required force for buoyant polymers is roughly five times our design
+          point. Kinetic energy scales with the square of velocity, so reaching that number by
+          spinning faster is not a small adjustment &mdash; it is a different machine, with different
+          pressures and different wear.
+        </p>
+        <p>
+          There is a second risk that matters as much as the first: a single chamber tuned to eject
+          heavy PET can concentrate light polypropylene in the stream it declares clean. Any design
+          must demonstrate that it does not simply move a problem from one species to another.
+          <a href="feasibility.html">How we plan to test both &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">6. Where it could go</h2>
+      <p class="section-sub">
+        The intended deployment is one device per riser, at or near where the pressure-reducing
+        valve already sits.
+      </p>
+      <div class="cards">
+        <div class="card card-accent">
+          <h3>Retrofit</h3>
+          <p>
+            In an existing building, the device occupies a plant-room position adjacent to
+            existing pressure control. No new energy supply is required, which is the single
+            biggest practical advantage of the concept.
+          </p>
+        </div>
+        <div class="card card-accent-green">
+          <h3>New build</h3>
+          <p>
+            Designed in from the start, the pressure budget, riser layout and waste-heat access can
+            all be arranged to suit. This is where the concept is most likely to work well.
+          </p>
+        </div>
+        <div class="card card-accent-tan">
+          <h3>A visible installation</h3>
+          <p>
+            The chamber is a glass-and-steel object with water visible inside it. That is an
+            opportunity but also a commitment: a public-facing installation has to work, and has to
+            be honest about what it is doing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta">
+        <div>
+          <h2>Next: what we can actually prove</h2>
+          <p>
+            The concept is not the hard part. Knowing whether it is real is. Here is what exists,
+            what does not, and the order we intend to work in.
+          </p>
+        </div>
+        <a class="btn" href="feasibility.html">Read the feasibility plan</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>The project</h4>
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="technology.html">The concept</a></li>
+          <li><a href="feasibility.html">Feasibility and open questions</a></li>
+          <li><a href="interest.html">Get involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:queries@fifecic.scot">queries@fifecic.scot</a></li>
+          <li><a href="https://github.com/FifeCIC/VortexCore/issues" rel="noopener">Raise a question on GitHub</a></li>
+          <li><a href="https://fifecic.scot/" rel="noopener">fifecic.scot</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Status</h4>
+        <ul>
+          <li>Concept and feasibility stage</li>
+          <li>Nothing built or certified</li>
+          <li>No patent application filed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <div class="footer-brand">
+        <img src="assets/img/fifecic-logo.png" alt="">
+        <span>Supported by FifeCIC &mdash; a Community Interest Company registered in Scotland.</span>
+      </div>
+      <p style="margin-top:14px">
+        Vortex Core is a research concept. No performance figures on this site are validated by
+        testing, and none should be relied upon. Where a number appears, it is either a design
+        target, a calculated requirement, or a stated assumption.
+      </p>
+      <p>
+        &copy; FifeCIC. Concept and design rights reserved. We are actively exploring the
+        intellectual-property position and welcome contact from anyone who can help with it.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="assets/js/vortex-3d.js" defer></script>
+
+</body>
+</html>
